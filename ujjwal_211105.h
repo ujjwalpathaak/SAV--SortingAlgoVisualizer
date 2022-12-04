@@ -47,7 +47,7 @@ void merge2SortedArrays(int a[], int si, int ei)
     delete[] output;
 }
 
-void mergeSort(int a[], int si, int ei)
+void CAlgorithms::mergeSort(int a[], int si, int ei)
 {
     if (si >= ei)
     {
@@ -59,4 +59,15 @@ void mergeSort(int a[], int si, int ei)
     mergeSort(a, mid + 1, ei);
 
     merge2SortedArrays(a, si, ei);
+}
+
+void COperations::randomizeAndSaveArray()
+{
+    unsigned int seed = (unsigned)time(NULL);
+    srand(seed);
+    for (int i = 0; i < arrSize; i++)
+    {
+        int random = rand() % (SCREEN_HEIGHT);
+        Barr[i] = random;
+    }
 }

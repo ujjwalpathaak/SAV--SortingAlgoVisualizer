@@ -42,7 +42,7 @@ int partition_array(int a[], int si, int ei)
     }
     return c;
 }
-void quickSort(int a[], int si, int ei)
+void CAlgorithms::quickSort(int a[], int si, int ei)
 {
     if (si >= ei)
     {
